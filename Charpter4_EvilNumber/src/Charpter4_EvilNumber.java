@@ -2,10 +2,11 @@
 import java.util.*;
 
 class GetEvilNumber {
-	int digits[] = {0, 0, 0, 0};
-	int leftAndRight[] = {0, 0, 0, 0 ,0, 0, 0, 0 , 0, 0, 0, 0 };
-	int indexGlobal = 0;
 	public void convert(int input) {
+		int digits[] = {0, 0, 0, 0};
+		int leftAndRight[] = {0, 0, 0, 0 ,0, 0, 0, 0 , 0, 0, 0, 0 };
+		int indexGlobal = 0;
+		
 		String s = Integer.toString(input);
 		/*set digits*/
 		for(int index = 0; index < 4; index++){
@@ -33,6 +34,10 @@ class GetEvilNumber {
 
 public class Charpter4_EvilNumber {
 	public static void main (String[] args) {
+		//String temp = "12....";
+		//String[] temp1 = temp.split("");
+		//System.out.println(temp1[0]);
+		//System.out.println(temp1[1]);
 		for(int i = 1001; i <= 9999; i++ ) {
 			GetEvilNumber EivlNumGet = new GetEvilNumber();
 			EivlNumGet.convert(i);

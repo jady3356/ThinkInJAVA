@@ -8,6 +8,12 @@ abstract class BasicClass {
 	public abstract void print(); 
 }
 
+abstract class BasicClassNoMethod {
+	BasicClassNoMethod() {
+		System.out.println("BasicClassNoMethod constructor");
+	}
+}
+
 class ExtendClassA extends BasicClass {
 	private int i = 1;
 	public void print() {
@@ -16,9 +22,24 @@ class ExtendClassA extends BasicClass {
 	}
 }
 
-public class abstract_class {
-	public static void main(String[] args) {
-		ExtendClassA TestA = new ExtendClassA();
-		TestA.print();
+class ExtendClassB extends BasicClassNoMethod {
+	void MethodA() {
+		System.out.println("ExtendClassB MethodA");
 	}
+
+}
+
+public class abstract_class {
+	
+	static void staticMethod(BasicClassNoMethod i) {
+		((ExtendClassB)i).MethodA();
+	}		
+
+	public static void main(String[] args) {
+		ExtendClassA Test3 = new ExtendClassA();
+		Test3.print();
+		ExtendClassB Test4 = new ExtendClassB();
+		Test4.MethodA();
+	}
+	
 }

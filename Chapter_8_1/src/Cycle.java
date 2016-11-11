@@ -4,6 +4,9 @@ class BasicCycle {
 	public void run() {
 		System.out.println("BasicCycle.run()");
 	}
+	void travel() {
+		System.out.println("BasicCycle.travel()");
+	}
 }
 
 class Unicycle extends BasicCycle {
@@ -27,6 +30,7 @@ class Tricycle extends BasicCycle {
 public class Cycle {
 	public static void Ride(BasicCycle c) {
 		c.run();
+		c.travel();
 	}
 	public static void main(String[] args) {
 		Unicycle UC = new Unicycle();
